@@ -40,68 +40,83 @@
 
 
 <style>
-    /* This centers the video and the chart */
-    .interactive-container {
+    /* This styles the white "floating" card */
+    .content-section {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 40px; /* Adds space so content isn't touching the edges */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        max-width: 800px;
+        margin: 20px auto;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers items horizontally */
-        text-align: center;
-        width: 100%;
-        margin-bottom: 30px;
+        align-items: center; /* Centers everything inside */
     }
 
-    /* Keeps the Tableau container exactly the same width as the video */
-    .tableauPlaceholder {
-        width: 560px !important; 
-        margin-top: 20px;
+    .interactive-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Keeps both the video and the viz at the same width */
+    .video-frame, .tableauPlaceholder {
+        width: 560px !important;
+        border-radius: 8px;
+        overflow: hidden;
     }
 </style>
 
-<div class="interactive-container">
-    <h3>MJ is a huge example to me of how hard work pays off. Here are some clips of his that help me stay motivated when things get hard.</h3>
+<div class="content-section">
+    <div class="interactive-container">
+        <h3 style="text-align: center; margin-bottom: 20px;">
+            MJ is a huge example to me of how hard work pays off. Here are some clips of his that help me stay motivated when things get hard.
+        </h3>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/NauAxHkqAyA?si=1Y7CB77Ne074UGx5"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video-frame" width="560" height="315" 
+            src="https://www.youtube.com/embed/NauAxHkqAyA?si=1Y7CB77Ne074UGx5"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
 
-    <h3 id="tableau-viz">Data Visualization of why MJ is the GOAT!</h3>
+        <h3 id="tableau-viz" style="margin-top: 30px;">Data Visualization of why MJ is the GOAT!</h3>
 
-    <div class='tableauPlaceholder' id='viz1765760762739' style='position: relative'>
-        <noscript>
-            <a href='#'><img alt='PlayerViz ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JordanCareerScoring&#47;PlayerViz&#47;1_rss.png' style='border: none' /></a>
-        </noscript>
-        <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='JordanCareerScoring&#47;PlayerViz' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JordanCareerScoring&#47;PlayerViz&#47;1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-        </object>
+        <div class='tableauPlaceholder' id='viz1765760762739' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt='PlayerViz' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JordanCareerScoring&#47;PlayerViz&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='JordanCareerScoring&#47;PlayerViz' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JordanCareerScoring&#47;PlayerViz&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
+
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1765760762739');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            // Height is set a bit taller to accommodate the Tableau dashboard layout
+            vizElement.style.width = '560px'; 
+            vizElement.style.height = '600px'; 
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
     </div>
-
-    <script type='text/javascript'>
-        var divElement = document.getElementById('viz1765760762739');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        
-        // This makes the chart match the YouTube video size
-        vizElement.style.width = '560px'; 
-        vizElement.style.height = '500px'; // You can adjust height if the chart looks too short
-        
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
 </div>
-
 
         <p>Curious about his stats? <a href="#final-wins">Jump to MJ's Finals Record</a></p>
 
@@ -137,6 +152,7 @@
 
 
 </html>
+
 
 
 
