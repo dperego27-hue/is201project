@@ -1,0 +1,109 @@
+/* Core Layout - Div 1: Main Positioning */
+.page-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: 'Lora', 'Georgia', serif; /* Serif for body text */
+    color: #212529;
+}
+
+/* Div 2: Content Block Styling */
+.content-section {
+    border-bottom: 1px solid #dee2e6; /* The light line from your screenshot */
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+/* Div 3: Interactive Container Styling */
+.interactive-container {
+    background-color: #c3e1ff; /* Light gray background */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+}
+
+/* Typography Requirements */
+h1, h2, h3 {
+    font-family: 'Open Sans', 'Helvetica', sans-serif; /* Bold headers */
+    font-weight: 800;
+    margin-top: 0;
+}
+
+/* Accent Color Requirement - The Teal Button */
+.custom-btn {
+    background-color: #64a19d;
+    color: lightgoldenrodyellow;
+    padding: 15px 25px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+/* Meta text style */
+.meta-text {
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffe9e9b2;
+    color: #212529;
+    margin: 0;
+}
+
+h1, h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+/* Div 1: Main Positioning Container */
+.page-wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Div 2: Content Block */
+.content-section {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+/* Div 3: Interactive App Container */
+.interactive-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.meta-text {
+    font-style: italic;
+    color: #6c757d;
+}
+
+.custom-btn {
+    background-color: #64a19d; /* Teal matching your photo */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0085A1;
+    font-weight: bold;
+}
