@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(253, 252, 252);
+    color: #212529;
+    line-height: 1.6;
+}
+
+h1 {
+
+color:#dee2e6
+
+}
+
+ h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    color: #212529;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.15rem;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+    color: #0085A1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.CSFont {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Positioning Divs (Requirements) */
+.page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.content-section {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.interactive-container {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
